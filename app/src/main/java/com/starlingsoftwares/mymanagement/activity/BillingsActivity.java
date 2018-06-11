@@ -33,6 +33,7 @@ public class BillingsActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         SharedPreferences prefs = getSharedPreferences("prerna", MODE_PRIVATE);
         data = prefs.getString("name", null);
+        
 
         llBilling = findViewById(R.id.ll_billing);
         llCrossBilling = findViewById(R.id.ll_cross_billing);
