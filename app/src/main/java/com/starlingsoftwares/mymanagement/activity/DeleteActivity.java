@@ -39,6 +39,7 @@ public class DeleteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delete);
+        getSupportActionBar().hide();
 
         delete_back = findViewById(R.id.delete_back);
         etFromDate = findViewById(R.id.et_from_date);
@@ -92,7 +93,6 @@ public class DeleteActivity extends AppCompatActivity {
         };
 
         String[] city_list = new String[5];
-
         city_list[0] = "Select Batch";
         city_list[1] = "Gurgaon";
         city_list[2] = "Faridabad";
@@ -101,8 +101,6 @@ public class DeleteActivity extends AppCompatActivity {
 
         ArrayAdapter<String> aa = new ArrayAdapter<String>(getApplicationContext(),
                 android.R.layout.simple_spinner_dropdown_item, city_list);
-
-
         spinner_delete_batchname = findViewById(R.id.spinner_delete_batchname);
         spinner_delete_batchname.setAdapter(aa);
 

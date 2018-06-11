@@ -20,7 +20,7 @@
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:id="@+id/duplicate_back"
-            android:src="@drawable/ic_back" />
+            android:src="@drawable/ic_backarrow" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/border"
+            android:background="@drawable/greyborderedittext"
             android:cursorVisible="false"
             android:drawableRight="@drawable/ic_date"
             android:hint="Select date"

@@ -26,7 +26,7 @@
                 android:layout_weight="0.2"
                 android:background="@color/red"
                 android:padding="10dp"
-                android:src="@drawable/ic_back" />
+                android:src="@drawable/ic_backarrow" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -70,6 +70,7 @@
                 android:cursorVisible="false"
                 android:autofillHints="Batch Name"
                 android:hint="Batch Name"
+                android:focusable="false"
                 android:textColorHint="@color/grey"
                 android:padding="10dp"
                 android:textAllCaps="true"

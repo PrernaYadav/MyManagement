@@ -5,7 +5,8 @@ public class Home {
     String id;
     int image;
 
-    public Home() {
+    public Home(String place) {
+        this.place = place;
     }
 
     public Home(String place, int image) {

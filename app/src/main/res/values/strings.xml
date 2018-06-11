@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyManagement</string>
+    <string name="location_promt">Choose Batch</string>
+
 </resources>

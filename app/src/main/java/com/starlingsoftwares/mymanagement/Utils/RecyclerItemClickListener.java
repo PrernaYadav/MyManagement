@@ -1,4 +1,4 @@
-package com.starlingsoftwares.mymanagement;
+package com.starlingsoftwares.mymanagement.Utils;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

@@ -10,9 +10,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-
 import com.starlingsoftwares.mymanagement.R;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
@@ -28,6 +26,8 @@ public class ViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
+        getSupportActionBar().hide();
+
         view_back = findViewById(R.id.view_back);
         etFromViewDate = findViewById(R.id.et_from_viewdate);
         etToViewDate = findViewById(R.id.et_to_viewdate);

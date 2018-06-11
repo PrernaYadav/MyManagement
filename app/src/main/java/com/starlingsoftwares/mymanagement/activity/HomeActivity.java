@@ -8,10 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
 
 import com.starlingsoftwares.mymanagement.R;
-import com.starlingsoftwares.mymanagement.RecyclerItemClickListener;
+import com.starlingsoftwares.mymanagement.Utils.RecyclerItemClickListener;
 import com.starlingsoftwares.mymanagement.adapter.HomeAdapter;
 import com.starlingsoftwares.mymanagement.model.Home;
 
@@ -32,6 +31,8 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getSupportActionBar().hide();
+
         editText=findViewById(R.id.et_batchname);
         imgMenu=findViewById(R.id.img_menu);
         recyclerView = findViewById(R.id.rv_home_billing);

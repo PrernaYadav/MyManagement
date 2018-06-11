@@ -23,12 +23,12 @@ public class DuplicateActivity extends AppCompatActivity {
     Calendar myCalendar = Calendar.getInstance();
     ImageView duplicate_back;
     Spinner spinner_duplicate_batchname;
-    String[] strings=new String[]{"","","","",""};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_duplicate);
+        getSupportActionBar().hide();
 
         etDate=findViewById(R.id.et_date);
         duplicate_back=findViewById(R.id.duplicate_back);

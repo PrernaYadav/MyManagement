@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="10dp"
-            android:src="@drawable/ic_back" />
+            android:src="@drawable/ic_backarrow" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
+                    android:background="@drawable/greyborderedittext"
                     android:cursorVisible="false"
                     android:drawableRight="@drawable/ic_date"
                     android:hint="Select date"
@@ -94,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:background="@drawable/border"
+                    android:background="@drawable/greyborderedittext"
                     android:cursorVisible="false"
                     android:drawableRight="@drawable/ic_date"
                     android:hint="Select date"
@@ -123,6 +123,7 @@
                 android:text="View"
                 android:layout_gravity="right"
                 android:layout_marginTop="10dp"
+                android:textColor="@android:color/white"
                 android:background="@drawable/button"
                 />
             <android.support.v7.widget.RecyclerView

@@ -1,6 +1,7 @@
 package com.starlingsoftwares.mymanagement.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -19,6 +20,7 @@ public class BillingsActivity extends AppCompatActivity {
     public static BillingsActivity mInstance;
     LinearLayout llBilling, llCrossBilling, llSeriesBilling;
     ImageView back_billing;
+    String data;
 
     public static BillingsActivity getInstace() {
         return mInstance;
@@ -28,6 +30,9 @@ public class BillingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_billings);
+        getSupportActionBar().hide();
+        SharedPreferences prefs = getSharedPreferences("prerna", MODE_PRIVATE);
+        data = prefs.getString("name", null);
 
         llBilling = findViewById(R.id.ll_billing);
         llCrossBilling = findViewById(R.id.ll_cross_billing);
@@ -42,6 +47,24 @@ public class BillingsActivity extends AppCompatActivity {
         fragmentTransaction.add(R.id.frame, fragment).commitAllowingStateLoss();
         frgManager.executePendingTransactions();
 
+        if (data.equals("billing")) {
+            llBilling.setBackgroundColor(getResources().getColor(R.color.orange));
+            llCrossBilling.setBackgroundColor(getResources().getColor(R.color.red));
+            llSeriesBilling.setBackgroundColor(getResources().getColor(R.color.red));
+            replaceFragment(new BillingFragment(), BillingFragment.class.getSimpleName());
+
+        } else if (data.equals("cross")) {
+            llBilling.setBackgroundColor(getResources().getColor(R.color.red));
+            llCrossBilling.setBackgroundColor(getResources().getColor(R.color.orange));
+            llSeriesBilling.setBackgroundColor(getResources().getColor(R.color.red));
+            replaceFragment(new CrossBillingFragment(), CrossBillingFragment.class.getSimpleName());
+
+        } else if (data.equals("series")) {
+            llBilling.setBackgroundColor(getResources().getColor(R.color.red));
+            llCrossBilling.setBackgroundColor(getResources().getColor(R.color.red));
+            llSeriesBilling.setBackgroundColor(getResources().getColor(R.color.orange));
+            replaceFragment(new SeriesBillingFragment(), SeriesBillingFragment.class.getSimpleName());
+        }
         back_billing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,5 +137,11 @@ public class BillingsActivity extends AppCompatActivity {
             fragmentTransaction.replace(R.id.frame, newFragment).commitAllowingStateLoss();
             frgManager.executePendingTransactions();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(BillingsActivity.this, MenuActivity.class));
     }
 }
